@@ -50,11 +50,13 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'codestar.urls'
@@ -93,7 +95,6 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
     "https://8000-taylorcarr-djangoblogpr-1fr1owen383.ws-eu108.gitpod.io",
 ]
