@@ -3,8 +3,8 @@ from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(Post)
-class PostAdmin(SummernoteModelAdmin):
+@admin.register(About)
+class AboutAdmin(SummernoteModelAdmin):
 
     list_display = ('title', 'slug', 'status')
     search_fields = ['title', ' content']
